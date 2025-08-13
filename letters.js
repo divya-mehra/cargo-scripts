@@ -1,9 +1,16 @@
-let allLetters = document.querySelectorAll(".letter");
-  
-let handleMouseEnter = (e) => {
-e.target.classList.add("oblique")}
+document.addEventListener('DOMContentLoaded', () => {
+  const allLetters = document.querySelectorAll(".letter");
 
-Array.from(allLetters).forEach(el => {
-el.addEventListener("mouseenter", handleMouseEnter);
-});     
-  
+  function handleMouseEnter(e) {
+    e.target.classList.add("oblique");
+  }
+
+  function handleMouseLeave(e) {
+    e.target.classList.remove("oblique");
+  }
+
+  allLetters.forEach(el => {
+    el.addEventListener("mouseenter", handleMouseEnter);
+    el.addEventListener("mouseleave", handleMouseLeave);
+  });
+});
