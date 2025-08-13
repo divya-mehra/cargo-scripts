@@ -5,12 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.target.classList.add("oblique");
   }
 
-  function handleMouseLeave(e) {
-    e.target.classList.remove("oblique");
-  }
-
   allLetters.forEach(el => {
     el.addEventListener("mouseenter", handleMouseEnter);
-    el.addEventListener("mouseleave", handleMouseLeave);
   });
 });
